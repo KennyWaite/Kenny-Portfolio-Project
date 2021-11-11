@@ -1,0 +1,524 @@
+// Colour palette - need to choose colour palette (based of picture will later add) and add global colour variables
+// Mixins - need to cutdown on repeated formatting, make mixins and partialise
+// Media Query - need to make more responsive and cleaner, less individual and more global if possible
+
+@use "./devices";
+
+.navbar {
+	display: flex;
+	height: 60px;
+	margin: 0px;
+	background-color: black;
+	color: #ffffff;
+	justify-content: space-between;
+	width: auto;
+
+	@include devices.XS-screen {
+		height: 20px;
+	}
+	@include devices.SM-screen {
+		height: 30px;
+	}
+	@include devices.MED-screen {
+		height: 40px;
+	}
+	@include devices.LG-screen {
+		height: 60px;
+	}
+	@include devices.XL-screen {
+		height: 80px;
+	}
+
+	&__heading {
+		margin-left: 20px;
+		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+			sans-serif;
+		font-weight: lighter;
+	}
+
+	&__list {
+		display: flex;
+		list-style: none;
+		text-align: right;
+		align-items: center;
+
+		&:visited {
+			color: white;
+		}
+	}
+
+	// &__n-right {
+	// 	justify-content: right;
+	// 	text-align: right;
+	// 	align-items: center;
+	// }
+}
+
+.list__link {
+	margin-right: 20px;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	font-weight: lighter;
+	text-decoration: none;
+	&:visited {
+		color: white;
+	}
+}
+.landing-page {
+	display: flex;
+	flex-direction: column;
+	background-color: lightcyan;
+	align-items: center;
+	justify-content: center;
+	width: auto;
+
+	@include devices.XS-screen {
+		height: 200px;
+	}
+	@include devices.SM-screen {
+		height: 400px;
+	}
+
+	@include devices.MED-screen {
+		height: 600px;
+	}
+	@include devices.LG-screen {
+		height: 800px;
+	}
+	@include devices.XL-screen {
+		height: 900px;
+	}
+
+	&__header1 {
+		text-align: left;
+		margin: 0;
+
+		@include devices.XS-screen {
+			height: 40px;
+		}
+		@include devices.SM-screen {
+			font-size: 60px;
+		}
+
+		@include devices.MED-screen {
+			font-size: 80px;
+		}
+		@include devices.LG-screen {
+			font-size: 100px;
+		}
+		@include devices.XL-screen {
+			font-size: 120px;
+		}
+	}
+	&__header2 {
+		text-align: left;
+		margin: 0;
+
+		@include devices.XS-screen {
+			height: 20px;
+		}
+		@include devices.SM-screen {
+			font-size: 30px;
+		}
+
+		@include devices.MED-screen {
+			font-size: 40px;
+		}
+		@include devices.LG-screen {
+			font-size: 50px;
+		}
+		@include devices.XL-screen {
+			font-size: 60px;
+		}
+	}
+}
+
+.about {
+	background-color: lightpink;
+	display: flex;
+	flex-direction: column;
+	width: auto;
+
+	@include devices.XS-screen {
+		height: 200px;
+	}
+	@include devices.SM-screen {
+		height: 400px;
+	}
+
+	@include devices.MED-screen {
+		height: 600px;
+	}
+	@include devices.LG-screen {
+		height: 800px;
+	}
+	@include devices.XL-screen {
+		height: 900px;
+	}
+
+	&__header2 {
+		text-align: left;
+		margin: 20px 0 0 100px;
+
+		@include devices.XS-screen {
+			font-size: 20px;
+		}
+		@include devices.SM-screen {
+			font-size: 40px;
+		}
+
+		@include devices.MED-screen {
+			font-size: 60px;
+		}
+		@include devices.LG-screen {
+			font-size: 80px;
+		}
+		@include devices.XL-screen {
+			font-size: 100px;
+		}
+	}
+	&__para {
+		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+			sans-serif;
+		font-weight: lighter;
+
+		@include devices.XS-screen {
+			font-size: 10px;
+			margin-left: 10px;
+			margin-bottom: 10px;
+		}
+		@include devices.SM-screen {
+			font-size: 15px;
+			margin-left: 10px;
+			margin-bottom: 10px;
+		}
+		@include devices.MED-screen {
+			font-size: 20px;
+			margin-left: 40px;
+			margin-bottom: 40px;
+		}
+		@include devices.LG-screen {
+			font-size: 25px;
+			margin-left: 50px;
+			margin-bottom: 50px;
+		}
+		@include devices.XL-screen {
+			font-size: 40px;
+			margin-left: 70px;
+			margin-bottom: 70px;
+		}
+	}
+}
+
+.tstacks {
+	background-color: rgb(253, 242, 142);
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	width: auto;
+
+	@include devices.XS-screen {
+		height: 200px;
+	}
+	@include devices.SM-screen {
+		height: 400px;
+	}
+
+	@include devices.MED-screen {
+		height: 600px;
+	}
+	@include devices.LG-screen {
+		height: 800px;
+	}
+	@include devices.XL-screen {
+		height: 900px;
+	}
+
+	&__img-cont {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__header3 {
+		text-align: left;
+		margin: 20px 0 0 100px;
+
+		@include devices.XS-screen {
+			font-size: 20px;
+		}
+		@include devices.SM-screen {
+			font-size: 40px;
+		}
+
+		@include devices.MED-screen {
+			font-size: 60px;
+		}
+		@include devices.LG-screen {
+			font-size: 80px;
+		}
+		@include devices.XL-screen {
+			font-size: 100px;
+		}
+	}
+	&__para {
+		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+			sans-serif;
+		font-weight: lighter;
+
+		@include devices.XS-screen {
+			font-size: 15px;
+			margin-left: 30px;
+		}
+		@include devices.SM-screen {
+			font-size: 25px;
+			margin-left: 60px;
+		}
+		@include devices.MED-screen {
+			font-size: 30px;
+			margin-left: 80px;
+		}
+		@include devices.LG-screen {
+			font-size: 40px;
+			margin-left: 100px;
+		}
+		@include devices.XL-screen {
+			font-size: 60px;
+			margin-left: 140px;
+		}
+	}
+}
+
+.projects {
+	background-color: rgb(200, 156, 221);
+	width: auto;
+
+	@include devices.XS-screen {
+		height: 200px;
+	}
+	@include devices.SM-screen {
+		height: 400px;
+	}
+
+	@include devices.MED-screen {
+		height: 600px;
+	}
+	@include devices.LG-screen {
+		height: 800px;
+	}
+	@include devices.XL-screen {
+		height: 900px;
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	&__header3 {
+		text-align: left;
+		margin: 20px 0 50px 100px;
+
+		@include devices.XS-screen {
+			font-size: 20px;
+		}
+		@include devices.SM-screen {
+			font-size: 40px;
+		}
+
+		@include devices.MED-screen {
+			font-size: 60px;
+		}
+		@include devices.LG-screen {
+			font-size: 80px;
+		}
+		@include devices.XL-screen {
+			font-size: 100px;
+		}
+	}
+
+	&__box {
+		border: 2px dashed white;
+		display: flex;
+
+		@include devices.XS-screen {
+			margin-left: 20px;
+			margin-right: 20px;
+			height: 80px;
+		}
+		@include devices.SM-screen {
+			margin-left: 25px;
+			margin-right: 25px;
+			height: 120px;
+		}
+
+		@include devices.MED-screen {
+			margin-left: 80px;
+			margin-right: 80px;
+			height: 200px;
+		}
+		@include devices.LG-screen {
+			margin-left: 100px;
+			margin-right: 100px;
+			height: 300px;
+		}
+		@include devices.XL-screen {
+			margin-left: 130px;
+			margin-right: 130px;
+			height: 400px;
+		}
+	}
+	&__para {
+		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+			sans-serif;
+		font-weight: lighter;
+
+		@include devices.XS-screen {
+			font-size: 15px;
+		}
+		@include devices.SM-screen {
+			font-size: 25px;
+		}
+		@include devices.MED-screen {
+			font-size: 30px;
+		}
+		@include devices.LG-screen {
+			font-size: 40px;
+		}
+		@include devices.XL-screen {
+			font-size: 60px;
+		}
+	}
+}
+
+.contact {
+	display: flex;
+	justify-content: center;
+	background-color: black;
+	align-items: center;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	width: auto;
+
+	color: white;
+	@include devices.XS-screen {
+		height: 40px;
+	}
+	@include devices.SM-screen {
+		height: 60px;
+	}
+
+	@include devices.MED-screen {
+		height: 80px;
+	}
+	@include devices.LG-screen {
+		height: 100px;
+	}
+	@include devices.XL-screen {
+		height: 120px;
+	}
+
+	&__header3 {
+		font-size: 30px;
+		margin-right: 10px;
+
+		@include devices.XS-screen {
+			font-size: 10px;
+			margin-left: 5px;
+		}
+		@include devices.SM-screen {
+			font-size: 15px;
+			margin-left: 5px;
+		}
+		@include devices.MED-screen {
+			font-size: 20px;
+			margin-left: 10px;
+		}
+		@include devices.LG-screen {
+			font-size: 30px;
+			margin-right: 10px;
+		}
+		@include devices.XL-screen {
+			font-size: 60px;
+			margin-left: 20px;
+		}
+	}
+	&__links {
+		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+			sans-serif;
+		font-weight: lighter;
+		align-items: center;
+		text-decoration: none;
+
+		@include devices.XS-screen {
+			font-size: 10px;
+			margin-right: 5px;
+		}
+		@include devices.SM-screen {
+			font-size: 15px;
+			margin-right: 5px;
+		}
+		@include devices.MED-screen {
+			font-size: 20px;
+			margin-right: 10px;
+		}
+		@include devices.LG-screen {
+			font-size: 30px;
+			margin-right: 10px;
+		}
+		@include devices.XL-screen {
+			font-size: 60px;
+			margin-right: 20px;
+		}
+
+		&:visited {
+			color: white;
+		}
+	}
+}
+
+.icons {
+	@include devices.XS-screen {
+		height: 20px;
+		width: 20px;
+	}
+	@include devices.SM-screen {
+		height: 25px;
+		width: 25px;
+	}
+
+	@include devices.MED-screen {
+		height: 40px;
+		width: 40px;
+	}
+	@include devices.LG-screen {
+		height: 50px;
+		width: 50px;
+	}
+	@include devices.XL-screen {
+		height: 75px;
+		width: 75px;
+	}
+}
+
+img {
+	@include devices.XS-screen {
+		height: 60px;
+		width: 60px;
+	}
+	@include devices.SM-screen {
+		height: 80px;
+		width: 80px;
+	}
+
+	@include devices.MED-screen {
+		height: 120px;
+		width: 120px;
+	}
+	@include devices.LG-screen {
+		height: 150px;
+		width: 150px;
+	}
+	@include devices.XL-screen {
+		height: 200px;
+		width: 200px;
+	}
+}
